@@ -16,6 +16,15 @@ This repository contains my Spark SQL practice programs.
 - Group By
 - Writing output files
 
+## Project Structure
+
+firstpy/
+│
+├── data/              # Input CSV and JSON files
+├── scripts/           # Spark SQL Python scripts
+├── README.md          # Project documentation
+└── first.py           # Basic practice script
+
 ## Author
 Khaja Moinuddin
 

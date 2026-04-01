@@ -1,3 +1,45 @@
+-- SQL Interview Practice Project
+-- Covers: Joins, Subqueries, Window Functions
+-- Includes: NULL handling, duplicates, ranking
+-- Author: shek khaja mohinuddin
+
+-- Employees Table
+CREATE TABLE employees (
+    emp_id INT,
+    name VARCHAR(50),
+    dept_id INT,
+    salary INT,
+    hire_date DATE
+);
+
+-- Departments Table
+CREATE TABLE departments (
+    dept_id INT,
+    dept_name VARCHAR(50)
+);
+
+-- Departments
+INSERT INTO departments VALUES
+(1, 'Engineering'),
+(2, 'Finance'),
+(3, 'HR'),
+(4, 'Marketing'),
+(5, 'Sales'); -- no employees (important case)
+
+-- Employees
+INSERT INTO employees VALUES
+(101, 'Alice', 1, 90000, '2020-01-15'),
+(102, 'Bob', 1, 80000, '2019-03-10'),
+(103, 'Carol', 2, 70000, '2021-06-25'),
+(104, 'David', 2, 60000, '2022-02-14'),
+(105, 'Eve', NULL, 65000, '2023-01-01'), -- no department
+(106, 'Frank', 3, 50000, '2020-09-09'),
+(107, 'Grace', 3, 50000, '2020-09-09'), -- duplicate salary
+(108, 'Heidi', 4, 75000, '2018-12-12'),
+(109, 'Ivan', 4, 75000, '2018-12-12'), -- duplicate
+(110, 'Judy', 2, 85000, '2017-07-07'),
+(111, 'Alice', 1, 90000, '2020-01-15'); -- duplicate record
+
 -- ===============================
 -- JOINS
 -- ===============================
